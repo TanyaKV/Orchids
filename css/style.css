@@ -1,0 +1,526 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Bellota', cursive;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 140%;
+    color: #345E35;    
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.title{
+    text-align: center;
+    font-weight: 500;
+    font-size: 60px;
+    font-style: italic;
+    line-height: 130%;
+}
+.container{
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+.header{
+    background-image: url(../img/fon.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+}
+.header__inner{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+.logo__img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;   
+}
+.header__top{
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0 49px;
+}
+.menu{
+    width: 100%;
+    margin-top: 15px;
+    padding: 27px 0 24px;
+}
+.menu__list{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 30px;
+    font-style: italic;
+    color: #345E35;
+}
+.menu__item{
+    list-style: none;
+}
+.header__title{
+    font-family: 'Bellota', cursive;
+    font-weight: 550;
+    font-size: 100px;
+    font-style: italic;
+    line-height: 130%;
+    text-align: center;
+}
+.header__descr{
+    font-weight: 700;
+    font-size: 33px;
+    min-width: 420px;
+    margin-bottom: 155px;
+    text-align: center;
+    font-style: italic;
+}
+.header__btn{
+    display: inline-block; 
+    font-size: 18px;
+    font-style: italic;
+    color: #fff;
+    padding: 19px 55px 20px;
+    background: #345E35;
+    border-radius: 30px;
+    margin-bottom: 30px;
+}
+/* о продукте */
+.product{
+    padding: 70px 0;
+}
+.product__title{
+    margin-bottom: 40px;
+}
+.product__info{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 70px;
+    margin-top: 20px;
+}
+.product__info-item{
+    font-family: 'Bellota', cursive;
+    font-weight: bold;
+    font-size: 58px;
+    line-height: 60px;
+    color: #345E35;
+    text-align: center;
+}
+.product__info-text{
+    font-family: 'Bellota', cursive;
+    font-size: 28px;
+    font-weight: 500;
+    color: #1f1e1e;
+    line-height: 25px;
+}
+/* галерея */
+.gallery{
+    margin-bottom: 70px;
+}
+.gallery__title{
+    margin-bottom: 40px;
+}
+.gallery__items{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 10px;
+    padding-bottom: 50px;    
+}
+.gallery__link{
+    display: flex;
+}
+.gallery__link:nth-child(1),
+.gallery__link:nth-child(3){
+    grid-row: span 2;    
+}
+.gallery__img{
+    width: 100%;
+    object-fit: cover;
+    background-position: center;
+}
+/* магазин */
+.store{
+    margin-bottom: 70px;
+    background-color: #E9E1E1;
+}
+.store__inner{
+    margin: 0 -7px;
+    margin-top: 40px;
+}
+.store__title{
+    padding-top: 30px;
+}
+.store__item-box{
+    border: 1px solid #c4c4c4;
+    padding: 6px 6px 16px 6px;
+    margin: 0 7px;
+    text-align: center;
+    transition: all 1s;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.store__item-box:hover {
+    color: #fff;
+    background-color: #76974bee;
+    border-color: #345E35;
+}
+.store__item-img{
+    max-width: 100%;
+    margin-bottom: 23px;
+    height: 350px;
+    width: 500px;
+    object-fit: contain;
+}
+.store__item-title{
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+.store .slick-dots{
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    list-style: none;
+    padding-bottom: 40px;
+}
+.store .slick-dots button{
+    font-size: 0;
+    border: none;
+    padding: 0;
+    margin: 0 10px;
+    background-color: #c4c4c4;
+    width: 50px;
+    height: 1px;
+}
+.store .slick-active button{
+    background-color: #345E35;
+    height: 13px;
+}
+/* видео блок */
+.about{
+    padding-bottom: 70px;
+}
+.about__inner{
+    display: grid;
+    grid-template-columns: 640px 448px ;
+    grid-gap: 32px;
+}
+.about__title{
+    margin-bottom: 40px;
+}
+.about__text{
+    font-size: 20px;
+}
+.about__link{
+    font-size: 16px;
+    line-height: 19px;
+    color: #c4c4c4;
+    text-decoration: underline;
+}
+.about__popup{
+    background-image: url(../img/video-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* блог */
+.blog{
+    text-align: center;
+    margin-bottom: 100px;
+} 
+.blog__title{
+    line-height: 64px;
+    font-family: 'Bellota', cursive;
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: 40px;
+}
+.blog__inner{
+    display: flex;
+    justify-content: space-between;
+}
+.blog__img{
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.blog__item-title{
+    padding: 30px 10px;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #888;
+    cursor: pointer;
+}
+.blog__link{
+    background-color: #345E35;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 35px;
+    font-size: 25px;  
+    border-radius: 20px;
+}
+/* футер */
+.footer__inner{
+    display: flex;
+    justify-content: space-between;
+}
+.footer__list{
+    list-style: none;
+    font-size: 20px;
+}
+.footer__item{
+    margin-bottom: 20px;
+}
+.footer__item-title{
+    color: #345E35;
+}
+.footer__form{
+    background-color: #345E35;
+    padding: 50px 75px 57px;
+    text-align: center;
+}
+.footer__title{
+    color: rgb(250, 250, 250);
+    margin-bottom: 16px;
+    font-size: 50px;
+}
+.footer__title::after{
+    background-color: #fff;
+}
+.footer__input{
+    background-color: transparent;
+    width: 450px;
+    height: 75px;
+    color: #fff;
+    border: 1px solid #fff;
+    margin-bottom: 12px;
+    display: block;
+    font-size: 24px;
+    padding: 0 15px;
+    text-align: center;
+    outline: none;
+}
+.footer__input::placeholder{
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 300;
+    color:#fff;
+}
+.footer__btn{
+    border: none;
+    border-radius: 20px;
+    color: rgb(73, 70, 70);
+    margin-top: 78px;
+    cursor: pointer;
+    padding: 13px 48px;
+    font-size: 16px;
+    line-height: 25px;
+}
+
+
+/* адаптив */
+@media screen and (max-width: 1140px){
+    .header__title{
+        font-size: 80px;
+    }
+    .header__descr{
+        font-size: 23px;
+        margin-bottom: 40px;
+    }
+    .header__btn{
+        font-size: 18px;
+        padding: 10px 40px 10px;
+    }
+    .about__inner{
+        grid-template-columns: 54% 44%;
+        grid-gap: 2%;
+    }
+}
+@media screen and (max-width: 970px){
+    .footer__info-title{
+        font-size: 50px;
+    }
+}
+@media screen and (max-width: 950px){
+    .blog__item-title{
+        padding: 25px 5px;
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: bold;
+    }
+    .blog__link{
+        padding: 10px 20px;
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 930px){
+    .store__item-title{
+        font-size: 18px;
+        line-height: 44px;
+        font-weight: bold;
+    }
+    .footer__form{
+        padding: 50px 50px 50px;
+    }
+    .footer__input{
+        width: 400px;
+        height: 60px;
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 860px){
+    .blog__inner{
+        display: block;
+    }
+    .blog__item{
+        display: flex;
+        align-content: stretch;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+}
+@media screen and (max-width: 850px){
+    .header__top{
+        display: inline-block;
+    }
+    .logo{
+        float: right;
+    }
+    .menu__list li{
+        position: absolute;
+        left: -105px;
+        transition: 0.3s;
+        padding: 5px;
+        width: 130px;
+        text-decoration: none;
+        font-size: 17px;
+        color: white;
+        background-color: #345E35;
+        border: 1px solid #c4c4c4;
+    }
+    .menu__list li:hover{
+        left: 0;
+    }
+    #about {
+        top: 20px;
+    }
+    #gallery {
+        top: 70px;
+    }
+    #store {
+        top: 120px;
+    }
+    #blog {
+        top: 170px;
+    }
+    #contact {
+        top: 220px;
+    }
+    .product__box{
+        font-size: 19px;
+    }
+    .product__info-text{
+        font-size: 19px;
+    }
+    .gallery__items{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .about__inner{
+        display: block;
+    }
+    .about__popup{
+        height: 350px;
+        margin-bottom: 10px;
+    }
+    .footer__inner{
+        flex-direction: column;
+    }
+    .footer__list{
+        text-align: center;
+    }
+    .footer__form{
+        padding: 50px 100px 50px;
+    }
+    .footer__title{
+        font-size: 40px;
+    }
+    .footer__input{
+        width: 250px;
+        margin: 10px auto;
+    }
+    .footer__btn{
+        margin-top: 35px;
+    } 
+}
+@media screen and (max-width: 650px){
+    .store__item-title{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 570px){
+    .blog__item{
+        flex-direction: column;
+        margin-bottom: 15px;
+    }
+    .store .slick-dots button{
+        width: 30px;
+    }   
+}
+@media screen and (max-width: 450px){
+    .header__title{
+        font-size: 60px;
+    }
+    .header__descr{
+        font-size: 21px;
+        min-width: 300px;
+    }
+    .header__btn{
+        display: block;
+        text-align: center;
+    }
+    .title{
+        font-size: 40px;
+    }
+    .product__info{
+        grid-gap: 25px;
+    }
+    .store .slick-dots button{
+        width: 15px;
+        height: 15px;
+    }
+    .store .slick-dots button{
+        height: 15px;
+    }   
+    .footer__form{
+        padding: 50px 0;
+    }
+}
+@media screen and (max-width: 350px){
+    .product__info {
+        grid-gap: 5px;
+    }
+    .gallery__items {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .footer__list{
+        font-size: 19px;
+    }
+}
+
